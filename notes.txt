@@ -32,3 +32,10 @@ Components Lifecycle - the most important three are:
  - OnInit - to perform component initialization and to retrieve data
  - OnChanges - to perform action after change to input properties
  - OnDestroy - to perform cleanup before Angular destroys the component
+
+module.id
+= sort of global variable when using the CommonJS module format
+- contains the absolute URL of the component class module file
+Requires:
+    - writing modules in CommonJS format
+    - using a module loader, such as SystemJS
