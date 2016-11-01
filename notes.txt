@@ -8,7 +8,6 @@ Template:
     1. Inline - template property with '', "" or ``(back ticks)
     2. Linked - external file
 
-Interpolation: {{template_expression}} = one way binding
 
 Directive: Custom HTML element or attribute used to extend basic HTML
     1. Customs(eg. referencing a component as an html tag)
@@ -16,11 +15,17 @@ Directive: Custom HTML element or attribute used to extend basic HTML
 
     1. Structural Directives(with asterisk): *ngIf, *ngFor
     2. 
+Bindings
+1. Interpolation: {{template_expression}} = one way binding
+2. Property binding: [element.property] = "template_expression"
+3. Event binding: (event) = "template_statement"
+4. Two-way data binding: [(ngModel)] = "template_expression", where ngModel is called binding source
 
-Property binding: [element.property] = "object.property"
-Event binding: (event) = "propery/method"
-Two-way data binding: [(element.property)] = "object.property"
+Using ngModel:
+    - always make sure you import FormModule
 
 Pipes: transform bound properties before displaying
     1. standard(date, number, decimal, percent, currency, json etc.)
     2. custom
+
+Components
