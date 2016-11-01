@@ -41,9 +41,20 @@ module.id = sort of global variable when using the CommonJS module format
         - writing modules in CommonJS format
         - using a module loader, such as SystemJS
 
-@Input decorator(applied to class property within the nested component) - used to pass data to a nested component
+@Input() decorator(applied to class property within the nested component) - used to pass data to a nested component from its container
     usage: <custom-component [input_property]='object.specificProperty'></custom-component>
 
-@Output decorator 
-    - decorates properties of type EventEmitter<T>(Angular's event)
+@Output() decorator 
+    - decorates properties of type EventEmitter<T>(Angular's event implementation)
     - used for sending data from nested component to parent(based on the T type specified for the event)
+
+Service
+= class with focused purpose
+- used for features that :
+    - are independent from any particular component
+    - provide shared data or logic across components
+    - encapsulates external interactions(eg. data access)
+- usually used with the @Injectable() decorator, to allow being injectable as dependency
+- can be registered as a provider(in providers array) at component level(root or nested) or module level, depending on the visibility needs
+
+Angular Injector - used to inject different dependencies(such as services) usually by constructor
