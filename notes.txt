@@ -28,4 +28,7 @@ Pipes: transform bound properties before displaying
     1. standard(date, number, decimal, percent, currency, json etc.)
     2. custom
 
-Components
+Components Lifecycle - the most important three are:
+ - OnInit - to perform component initialization and to retrieve data
+ - OnChanges - to perform action after change to input properties
+ - OnDestroy - to perform cleanup before Angular destroys the component
