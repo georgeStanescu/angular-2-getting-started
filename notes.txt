@@ -16,3 +16,11 @@ Directive: Custom HTML element or attribute used to extend basic HTML
 
     1. Structural Directives(with asterisk): *ngIf, *ngFor
     2. 
+
+Property binding: [element.property] = "object.property"
+Event binding: (event) = "propery/method"
+Two-way data binding: [(element.property)] = "object.property"
+
+Pipes: transform bound properties before displaying
+    1. standard(date, number, decimal, percent, currency, json etc.)
+    2. custom
