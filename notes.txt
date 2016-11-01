@@ -1,0 +1,18 @@
+Index.html -> systemjs.config.js -> main.ts -> app.module(AppModule) -> imports, declarations(components- eg. AppComponent), bootstrap
+
+AppModule - imports BrowserModule that exposes many external things
+
+Component: Template + JS Class(properties and methods) + Metadata(eg. : @Component decorator)
+
+Template: 
+    1. Inline - template property with '', "" or ``(back ticks)
+    2. Linked - external file
+
+Interpolation: {{template_expression}} = one way binding
+
+Directive: Custom HTML element or attribute used to extend basic HTML
+    1. Customs(eg. referencing a component as an html tag)
+    2. Built-In
+
+    1. Structural Directives(with asterisk): *ngIf, *ngFor
+    2. 
