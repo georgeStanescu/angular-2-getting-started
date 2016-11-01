@@ -15,6 +15,7 @@ Directive: Custom HTML element or attribute used to extend basic HTML
 
     1. Structural Directives(with asterisk): *ngIf, *ngFor
     2. 
+
 Bindings
 1. Interpolation: {{template_expression}} = one way binding
 2. Property binding: [element.property] = "template_expression"
@@ -26,16 +27,19 @@ Using ngModel:
 
 Pipes: transform bound properties before displaying
     1. standard(date, number, decimal, percent, currency, json etc.)
-    2. custom
+    2. custom - decorating the class with @Pipe and implementing PipeTransform and then defining the Transform method
+        eg. expression | customPipe: arg1, arg2
 
 Components Lifecycle - the most important three are:
  - OnInit - to perform component initialization and to retrieve data
  - OnChanges - to perform action after change to input properties
  - OnDestroy - to perform cleanup before Angular destroys the component
 
-module.id
-= sort of global variable when using the CommonJS module format
-- contains the absolute URL of the component class module file
-Requires:
-    - writing modules in CommonJS format
-    - using a module loader, such as SystemJS
+module.id = sort of global variable when using the CommonJS module format
+    - contains the absolute URL of the component class module file
+    - requires:
+        - writing modules in CommonJS format
+        - using a module loader, such as SystemJS
+
+@Input decorator(applied to class property within the nested component) - used to pass data to a nested component
+    usage: <custom-component [input_property]='object.specificProperty'></custom-component>
