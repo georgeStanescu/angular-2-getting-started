@@ -43,3 +43,7 @@ module.id = sort of global variable when using the CommonJS module format
 
 @Input decorator(applied to class property within the nested component) - used to pass data to a nested component
     usage: <custom-component [input_property]='object.specificProperty'></custom-component>
+
+@Output decorator 
+    - decorates properties of type EventEmitter<T>(Angular's event)
+    - used for sending data from nested component to parent(based on the T type specified for the event)
