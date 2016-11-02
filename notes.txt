@@ -81,3 +81,9 @@ Routings
 RouterOutlet(<routerOutlet>)
 - identifies where to display the routed component's view
 - specified in the host component's template
+
+Protecting against Routes with Guards:
+- CanActivate - guard navigation to a route
+- CanDeactivate - guard navigation from a route
+- Resolve - prefetch data before activating a route
+- CanLoad - prevent async routing
