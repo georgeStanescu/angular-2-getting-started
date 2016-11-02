@@ -87,3 +87,42 @@ Protecting against Routes with Guards:
 - CanDeactivate - guard navigation from a route
 - Resolve - prefetch data before activating a route
 - CanLoad - prevent async routing
+
+Angular Module
+- class with @NgModule decorator
+- organizes the pieces of an app and arranges them into blocks
+- extends the app with capabilities from external libraries
+- useful for aggregation and re-export
+- declares and bootstraps: components, directives, pipes
+- can import other modules
+- registers providers, such as services
+
+    Bootstrap Array
+        - every app must bootstrap at least one component, the root application component
+        - should be used only in the root application module
+
+    Declaration Array
+        - contains only components, directives and pipes
+        - every component, directive and pipe must belong to one and only one Angular module
+        - all declared components, directives and pipes are private by default. they are accessible to other components, directives and pipes 
+            declared in the same module 
+
+    Exports Array
+        - exposing components, directives and pipes to other modules
+        - re-export modules to re-export theur components, directives and pipes
+        - we can re-export something without importing it first
+        - services must never be exported
+
+    Imports Array
+        - allows importing external modules in current module
+        - importing a module makes availalble any exported components, directives and pipes from that module
+        - ony import modules that are needed
+        - importing a module does not provide access to its imported modules
+
+    Providers Array
+        - registers services at module level
+        - any services provider added to the providers array is registered at the root of the application 
+            => are acessible to other custom modules defined in the app
+        - don't add services to the providers array of a shared module
+            => consider building a CoreModule for services and importing it one in the AppModule
+        - routing guards must be added to the providers array of a module
