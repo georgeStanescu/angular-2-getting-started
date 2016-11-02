@@ -68,3 +68,16 @@ Observables(rely on Reactive Extensions - RxJS, as they are not implemented in E
 Promise vs Observables
 - Promise: provides single future value, not lazy, not cancellable
 - Observable: emits multiple values over time, lazy, cancellable, supports map, filter, reduce and similar operators
+
+Routings
+- all views must be present in DOM(SPA principle), but only one is displayed at a time
+- we configure a route for each component
+- we activate a route based on user action => activating a route means displaying the component's view
+- a component that is displayed via routing doesn't need a selector, unless is also used for nesting in another component
+- requires to define a RouterModule in the corresponding Angular Module
+-relies on the routerLink directive applied as an attribute of a clickable element, enclosed in [] and bound to a path from link parameters array 
+    defined in the corresponding module 
+
+RouterOutlet(<routerOutlet>)
+- identifies where to display the routed component's view
+- specified in the host component's template
