@@ -58,3 +58,13 @@ Service
 - can be registered as a provider(in providers array) at component level(root or nested) or module level, depending on the visibility needs
 
 Angular Injector - used to inject different dependencies(such as services) usually by constructor
+
+Observables(rely on Reactive Extensions - RxJS, as they are not implemented in ECMA Script 2015)
+    Observables Operators = methods on observables that compose new observables
+        - Transform the source observable in some way
+        - process each value as it is emitted
+        - eg : map, filter, take, merge,
+
+Promise vs Observables
+- Promise: provides single future value, not lazy, not cancellable
+- Observable: emits multiple values over time, lazy, cancellable, supports map, filter, reduce and similar operators
